@@ -1,0 +1,59 @@
+.todoList {
+    max-width: 800px;
+    width: 100%;
+    margin: 0px auto;
+    .search {
+        input {
+            width: 100%;
+            border-radius: 30px;
+            border: 2px solid #e6e6e6;
+            padding: 12px 20px;
+        }
+    }
+    .list {
+        padding: 0px;
+        .item {
+            text-align: left;
+            padding: 15px 20px;
+            .inp {
+                padding: 10px 15px;
+            }
+            .btn {
+                padding: 5px 15px;
+            }
+            &:not(:last-child) {
+                border-bottom: 1px solid #ebebeb;
+            }
+            &:hover {
+                background-color: #fafafa;
+                .remove-icon {
+                    opacity: 1;
+                }
+            }
+            &.isChecked {
+                background-color: #fafafa;
+                label {
+                    text-decoration: line-through;
+                }
+            }
+            .remove-icon {
+                cursor: pointer;
+                opacity: 0;
+                display: inherit;
+                img {
+                    width: 15px;
+                }
+            }
+            .edit-icon {
+                margin-left: 10px;
+                vertical-align: middle;
+                cursor: pointer;
+                img {
+                    width: 15px;
+                    height: 15px;
+                    fill: #75767c;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+html, body {
+    font-family: 'Rubik', sans-serif;
+}
+
+/* start helpful classes */
+
+.d-flex {
+    display: flex;
+    gap: 10px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.justify-content-space-between {
+    justify-content: space-between;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+/* end helpful classes */
+
+
+.page-title {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.shadow-block {
+    box-shadow: 0px 0px 10px rgba(44, 44, 44, 0.15);
+    border-radius: 5px;
+    background-color: var(--white);
+    padding: 20px;
+    margin: 20px 0px;
+    box-sizing: border-box;
+}
+
+.inp {
+    width: 100%;
+    border-radius: 30px;
+    border: 2px solid var(--border);
+    padding: 12px 20px;
+    max-width: 100%;
+}
+
+.lbl {
+    color: var(--text);
+    font-size: 14px;
+}
+
+.btn {
+    border-radius: 5px;
+    padding: 15px 30px;
+    border: unset;
+    cursor: pointer;
+    &.gradient {
+        background-image: linear-gradient(to right top, var(--primary), #57cbac, #5acfa5, #60d39c, #69d693);
+        color: var(--white);
+    }
+}
+
+/* start custom checkbox style */
+
+.checkbox-container {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    border: 1px solid var(--border);
+    position: relative;
+    display: inline-block;
+    margin-right: 12px;
+    vertical-align: middle;
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+        left: 0px;
+        right: 0px;
+        margin: 0px;
+        &:checked, &:hover {
+            & ~ .checkbox-checkmark {
+                background-color: var(--primary);
+                &:after {
+                    display: block;
+                }
+            }
+        }
+    }
+    .checkbox-checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: var(--white);
+        box-shadow: unset;
+        border-radius: 2px;
+        &:after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 0px;
+            right: 0px;
+            margin: 0px auto;
+            top: 35%;
+            width: 3px;
+            height: 6px;
+            border: solid var(--white);
+            border-width: 0 2px 2px 0;
+            transform: translateY(-35%) rotate(45deg);
+        }
+    }
+}
+
+/* end custom checkbox style */
